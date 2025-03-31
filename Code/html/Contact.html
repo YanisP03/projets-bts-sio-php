@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - Allopro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css">
+</head>
+    <!-- Navigation -->
+    <nav class="gradient-nav fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#test"><span class="text-3xl font-bold text-yellow-500">ALLOPRO</span></a>
+                </div>
+    
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../html/index2.html" class="nav-link text-gray-100 hover:text-yellow-500 px-3 py-6 font-medium transition-colors">Accueil</a>
+                    <a href="../html/Portfolio.html" class="nav-link text-gray-100 hover:text-yellow-500 px-3 py-6 font-medium transition-colors">Portfolio</a>
+                    <a href="../hmtl/Realisation.html" class="nav-link text-gray-100 hover:text-yellow-500 px-3 py-6 font-medium transition-colors">Réalisations</a>
+                    <a href="#" class="nav-link text-gray-100 hover:text-yellow-500 px-3 py-6 font-medium transition-colors">Contact</a>
+                </div>
+    
+                <!-- Bouton de connexion -->
+                <div class="hidden md:flex items-center">
+                    <a href="../php/connexion.php" 
+                       class="bg-yellow-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-600 transition-all duration-300">
+                        Connexion
+                    </a>
+                </div>
+    
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-100 hover:text-yellow-500 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path class="close-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden absolute w-full menu-backdrop">
+            <div class="px-4 py-4 space-y-3">
+                <a href="../html/index2.html" class="block text-gray-100 hover:text-yellow-500 font-medium px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">Accueil</a>
+                <a href="../html/Portfolio.html" class="block text-gray-100 hover:text-yellow-500 font-medium px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">Portfolio</a>
+                <a href="../html/Realisation.html" class="block text-gray-100 hover:text-yellow-500 font-medium px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">Réalisations</a>
+                <a href="#" class="block text-gray-100 hover:text-yellow-500 font-medium px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="pt-32 pb-16 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-yellow-500 text-lg font-medium tracking-wider mb-3 block">NOUS CONTACTER</span>
+                <h2 class="text-4xl font-bold text-white mb-4">Parlons de votre projet</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto opacity-50"></div>
+            </div>
+
+            <form action="../html/index2.php" method="POST" class="bg-gray-800/50 p-8 rounded-lg shadow-lg space-y-6 backdrop-blur-sm">
+                <!-- Case Service -->
+                <div>
+                    <label for="service" class="block text-gray-300 font-medium mb-2">Service</label>
+                    <select id="service" name="service" required 
+                            class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-100">
+                        <option value="" disabled selected>Choisissez un service</option>
+                        <option value="Plomberie">Plomberie</option>
+                        <option value="Maçonnerie">Maçonnerie</option>
+                        <option value="Peinture">Peinture</option>
+                        <option value="Électricité">Électricité</option>
+                        <option value="Carrelage">Carrelage</option>
+                        <option value="Menuiserie">Menuiserie</option>
+                        <option value="Serrurerie">Serrurerie</option>
+                        <option value="Plâtrerie">Plâtrerie</option>
+                        <option value="Climatisation">Climatisation</option>
+                        <option value="Construction métallique">Construction métallique</option>
+                        <option value="Rénovation générale">Rénovation générale</option>
+                        <option value="Terrassement">Terrassement</option>
+                        <option value="Couverture">Couverture</option>
+                        <option value="Isolation">Isolation</option>
+                        <option value="Autre">Autre ...</option>
+                    </select>
+                </div>
+                
+                <!-- Champs de contact -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label for="name" class="block text-gray-300 font-medium mb-2">Nom complet</label>
+                        <input type="text" id="name" name="name" required 
+                               class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-100">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-300 font-medium mb-2">E-mail</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-100">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-300 font-medium mb-2">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" required 
+                               class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-100"
+                               placeholder="+237 1 23 45 67 89">
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-gray-300 font-medium mb-2">Sujet</label>
+                    <input type="text" id="subject" name="subject" required 
+                           class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-100">
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-300 font-medium mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" required 
+                            class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-100"></textarea>
+                </div>
+                <button type="submit" 
+                        class="w-full bg-yellow-500 py-3 rounded-lg text-white font-bold hover:bg-yellow-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                    Envoyer votre message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-12 text-white bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">ALLOPRO</h3>
+                    <p class="text-gray-400">Votre partenaire de confiance pour tous vos projets de construction et rénovation.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 transition-colors">Construction</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition-colors">Rénovation</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition-colors">Expertise</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li>123 Rue de la Construction</li>
+                        <li>75000 Paris, France</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>contact@allopro.fr</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 ALLOPRO. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+    .gradient-nav {
+        background: linear-gradient(to bottom, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.8));
+        backdrop-filter: blur(10px);
+    }
+    </style>
+</body>
+<script src="../js/navbar.js"></script>
+</html>

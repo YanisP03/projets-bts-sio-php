@@ -1,0 +1,121 @@
+/* Style global de la page */
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f172a, #1e293b); /* Dégradé sombre bleu-gris */
+    color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Conteneur du formulaire */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(17, 24, 39, 0.9); /* Fond sombre */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol du conteneur */
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Style du titre */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Style du formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Style des labels */
+form label {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #b0b0b0;
+    width: 100%;
+}
+
+/* Style des champs de saisie */
+form input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    border: 2px solid rgba(234, 179, 8, 0.9); /* Orange clair */
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background: #1e293b; /* Sombre bleu-gris */
+    color: #fff;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+/* Style des champs de saisie lors du focus */
+form input:focus {
+    border-color: rgba(202, 138, 4, 0.9); /* Orange foncé */
+    outline: none;
+}
+
+/* Style du bouton */
+form button {
+    background-color: rgba(234, 179, 8, 0.9); /* Orange clair */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+form button:hover {
+    background-color: rgba(202, 138, 4, 0.9); /* Orange foncé */
+    transform: scale(1.05);
+}
+
+/* Style du texte en dessous du formulaire */
+p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fafafa;
+}
+
+/* Style du lien dans le texte */
+p a {
+    color: rgba(234, 179, 8, 0.9); /* Orange clair */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Effet au survol du lien */
+p a:hover {
+    color: rgba(202, 138, 4, 0.9); /* Orange foncé */
+    text-decoration: underline;
+}
+
+/* Style des messages d'erreur */
+.error {
+    color: #f63e4e;
+    margin-top: 10px;
+    font-size: 14px;
+}

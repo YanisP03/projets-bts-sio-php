@@ -1,0 +1,211 @@
+/* Animations générales */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatingAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animation des éléments de navigation */
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #F59E0B;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Animations des sections */
+.hero-section {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-section h1 {
+    animation: slideInFromBottom 1s ease-out 0.2s both;
+}
+
+.hero-section p {
+    animation: slideInFromBottom 1s ease-out 0.4s both;
+}
+
+.hero-section .cta-button {
+    animation: slideInFromBottom 1s ease-out 0.6s both;
+}
+
+/* Animations des cartes de service */
+.expertise-card {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideInFromBottom 0.6s ease-out forwards;
+}
+
+.expertise-card:nth-child(1) { animation-delay: 0.1s; }
+.expertise-card:nth-child(2) { animation-delay: 0.2s; }
+.expertise-card:nth-child(3) { animation-delay: 0.3s; }
+.expertise-card:nth-child(4) { animation-delay: 0.4s; }
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.expertise-card .icon-container {
+    animation: floatingAnimation 3s ease-in-out infinite;
+}
+
+/* Animations du formulaire de contact */
+.contact-form-container {
+    animation: scaleIn 0.8s ease-out;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.1);
+}
+
+/* Animations du portfolio */
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideInFromBottom 0.6s ease-out forwards;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-card img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card .overlay {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+}
+
+.portfolio-card:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations des partenaires */
+.partner-logo {
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Animations pour le menu mobile */
+.mobile-menu {
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animation du footer */
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #F59E0B, transparent);
+    animation: slideInFromLeft 1.5s ease-out;
+}

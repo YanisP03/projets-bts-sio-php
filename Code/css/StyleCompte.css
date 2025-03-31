@@ -1,0 +1,157 @@
+/* Réinitialisation des marges et paddings pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif; /* Police par défaut */
+}
+
+/* Définition de la hauteur du body */
+body {
+    height: 100%;
+}
+
+/* Styles de la barre de navigation */
+.navbar {
+    height: 30px; /* Hauteur de la barre de navigation */
+    padding: 20px 5%; /* Padding pour espacement interne */
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical des éléments */
+    position: sticky; /* La barre reste en haut de la page */
+    top: 0%; /* Fixe la barre en haut de la page */
+    z-index: 999; /* Assure que la barre se trouve au-dessus des autres éléments */
+    background-color: rgba(17, 24, 39, 0.9); /* Fond sombre bleu-gris */
+}
+
+.navbar h1 {
+    color: white; /* Couleur du titre en blanc */
+}
+
+/* Styles du menu dans la barre de navigation */
+.navbar .menu li {
+    list-style: none; /* Supprime les puces */
+    display: inline-block; /* Affichage en ligne des éléments */
+}
+
+.navbar .menu li a {
+    display: block;
+    margin-left: 20px; /* Espacement entre les liens */
+    color: white; /* Couleur du texte en blanc */
+    border-bottom: 4px solid transparent; /* Bordure sous les liens, invisible par défaut */
+    text-decoration: none; /* Supprime les soulignements */
+    font-size: 15px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Effet de survol des liens du menu */
+.navbar .menu li a:hover {
+    border-bottom: 4px solid rgba(234, 179, 8, 0.9); /* Bordure orange clair au survol */
+}
+
+/* Styles du logo */
+.Logo {
+    position: absolute; /* Positionnement absolu du logo */
+    z-index: 4; /* Met le logo au-dessus des autres éléments */
+    left: 5px; /* Positionnement à gauche */
+    top: 5px; /* Positionnement en haut */
+    border-radius: 50%; /* Arrondir le logo */
+    max-width: 5%; /* Limite la taille du logo */
+    height: auto; /* Hauteur auto pour conserver les proportions */
+    transition: all 0.2s ease; /* Transition fluide lors du survol */
+}
+
+.Logo:hover {
+    transform: scale(1.1); /* Agrandissement du logo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Ombre autour du logo */
+}
+
+/* Section du contenu principal */
+.content {
+    background-image: url(../Images/PageCompte.png); /* Image de fond */
+    background-size: cover; /* Couvre toute la zone */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+    position: relative; /* Permet d'ajouter un élément superposé */
+    display: flex; /* Utilisation de flexbox pour l'alignement */
+    flex-direction: column; /* Colonne pour disposer les éléments verticalement */
+    justify-content: flex-start; /* Aligne les éléments en haut */
+    align-items: flex-start; /* Aligne les éléments à gauche */
+    color: #fafafa; /* Couleur du texte en gris clair */
+    height: 100vh; /* Hauteur de la section égale à la hauteur de la fenêtre */
+    padding: 40px 5%; /* Espacement interne */
+}
+
+/* Ajout d'un fond semi-transparent sur la section */
+.content::before {
+    content: ""; /* Contenu vide */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+    z-index: 1; /* Assure que le fond est derrière le texte */
+}
+
+/* Titre principal */
+.content h1 {
+    font-size: 70px; /* Taille du titre */
+    z-index: 2; /* Assure que le titre est au-dessus de l'overlay */
+    color: rgba(234, 179, 8, 0.9); /* Couleur orange clair */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Ombre portée pour rendre le texte lisible */
+    animation: fadeInDown 1s ease-in-out; /* Animation d'apparition du titre */
+}
+
+/* Paragraphe sous le titre */
+.content p {
+    font-size: 25px; /* Taille du texte */
+    margin-top: 10px; /* Espacement entre le titre et le paragraphe */
+    z-index: 2; /* Assure que le texte est visible par-dessus l'overlay */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Ombre portée */
+    animation: fadeInUp 1.2s ease-in-out; /* Animation d'apparition du texte */
+}
+
+/* Styles des liens dans la section de contenu */
+.content a {
+    display: inline-block;
+    margin-top: 20px; /* Espacement au-dessus du bouton */
+    padding: 15px 30px; /* Padding autour du texte du bouton */
+    font-size: 18px; /* Taille du texte dans le bouton */
+    color: white; /* Couleur du texte en blanc */
+    text-decoration: none; /* Supprime les soulignements */
+    background: linear-gradient(45deg, rgba(234, 179, 8, 0.9), #43b581); /* Dégradé vert et orange clair */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre du bouton */
+    transition: all 0.3s ease; /* Transition pour les effets de survol */
+    z-index: 2; /* Assure que le bouton est au-dessus de l'overlay */
+}
+
+/* Effet de survol des boutons */
+.content a:hover {
+    transform: translateY(-3px); /* Déplace légèrement le bouton vers le haut */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Ombre plus forte au survol */
+    background: linear-gradient(45deg, #218838, #2e7d32); /* Couleur plus sombre au survol */
+}
+
+/* Animation d'apparition du titre (de haut vers bas) */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Déplacement du titre au-dessus */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Remise à sa place */
+    }
+}
+
+/* Animation d'apparition du texte (de bas vers haut) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Déplacement du texte en dessous */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Remise à sa place */
+    }
+}

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "projet php",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "projet php"
+	}
+}
