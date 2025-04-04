@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="container">
-        <h1>Connexion</h1>
+        <h1>Connexion test</h1>
         
         <!-- Formulaire de connexion -->
         <form action="./connexion.php" method="post">
