@@ -96,7 +96,7 @@ $role = isset($_SESSION['role']) ? htmlspecialchars($_SESSION['role']) : "Rôle 
                         </a>
                     <?php endif; ?>
                     
-                    <a href="modifier_mot_de_passe.php" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 w-full max-w-xs text-center">
+                    <a href="modifmdp.php" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 w-full max-w-xs text-center">
                         Changer le mot de passe
                     </a>
                     
