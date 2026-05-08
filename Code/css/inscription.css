@@ -1,128 +1,126 @@
-/* Style global de la page */
+/* Styles de base pour le corps de la page - thème sombre */
 body {
-    font-family: "Roboto Condensed", sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #0f172a, #1e293b); /* Dégradé sombre bleu-gris */
-    color: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #121826; /* Fond sombre */
+    color: #fff; /* Texte blanc */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Conteneur du formulaire */
-.container {
-    text-align: center;
+/* Champs de formulaire avec style sombre et animation au focus */
+.form-input {
+    background-color: #1f2937; /* Fond sombre pour les inputs */
+    color: #fff; /* Texte blanc */
+    border: 1px solid #4b5563; /* Bordure grise */
+    padding: 0.75rem;
+    border-radius: 0.5rem;
     width: 100%;
-    max-width: 400px;
-    background: rgba(17, 24, 39, 0.9); /* Fond sombre */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s ease;
-}
-
-/* Effet au survol du conteneur */
-.container:hover {
-    transform: scale(1.02);
-}
-
-/* Style du titre */
-h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: white;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-}
-
-/* Style du formulaire */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
-}
-
-/* Style des labels */
-form label {
-    text-align: left;
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #b0b0b0;
-    width: 100%;
-}
-
-/* Style des champs de saisie */
-form input {
-    width: 100%;
-    max-width: 350px;
-    padding: 12px;
-    border: 2px solid rgba(234, 179, 8, 0.9); /* Orange clair */
-    border-radius: 6px;
-    margin-bottom: 15px;
-    background: #1e293b; /* Sombre bleu-gris */
-    color: #fff;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-}
-
-/* Style des champs de saisie lors du focus */
-form input:focus {
-    border-color: rgba(202, 138, 4, 0.9); /* Orange foncé */
     outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Style du bouton */
-form button {
-    background-color: rgba(234, 179, 8, 0.9); /* Orange clair */
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
+.form-input:focus {
+    border-color: #f59e0b; /* Bordure dorée au focus */
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3); /* Halo doré au focus */
+}
+
+/* Bouton principal avec couleur dorée */
+.button-primary {
+    background-color: #f59e0b; /* Fond doré */
+    color: #000; /* Texte noir pour contraste */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-primary:hover {
+    background-color: #d97706; /* Doré plus foncé au survol */
+    transform: translateY(-2px); /* Effet d'élévation au survol */
+}
+
+/* Bouton secondaire avec couleur grise */
+.button-secondary {
+    background-color: #4b5563; /* Fond gris */
+    color: #fff; /* Texte blanc */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-secondary:hover {
+    background-color: #374151; /* Gris plus foncé au survol */
+    transform: translateY(-2px); /* Effet d'élévation au survol */
+}
+
+/* Conteneur pour le champ de mot de passe avec bouton toggle */
+.password-container {
+    position: relative;
+}
+
+/* Bouton pour afficher/masquer le mot de passe */
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af; /* Couleur gris clair */
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s;
 }
 
-/* Effet au survol du bouton */
-form button:hover {
-    background-color: rgba(202, 138, 4, 0.9); /* Orange foncé */
-    transform: scale(1.05);
+.password-toggle:hover {
+    color: #f59e0b; /* Couleur dorée au survol */
 }
 
-/* Style du texte en dessous du formulaire */
-p {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #fafafa;
+/* Indicateur de force du mot de passe */
+.password-strength {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    transition: color 0.3s;
 }
 
-/* Style du lien dans le texte */
-p a {
-    color: rgba(234, 179, 8, 0.9); /* Orange clair */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+/* Variations de couleur selon la force du mot de passe */
+.strength-weak {
+    color: #ef4444; /* Rouge pour mot de passe faible */
 }
 
-/* Effet au survol du lien */
-p a:hover {
-    color: rgba(202, 138, 4, 0.9); /* Orange foncé */
-    text-decoration: underline;
+.strength-medium {
+    color: #f59e0b; /* Doré pour mot de passe moyen */
 }
 
-/* Style des messages d'erreur */
-.error {
-    color: #f63e4e; /* Rouge vif pour les erreurs */
-    margin-top: 10px;
-    font-size: 14px;
+.strength-strong {
+    color: #10b981; /* Vert pour mot de passe fort */
 }
 
-/* Style des messages de succès */
-.success {
-    color: rgba(234, 179, 8, 0.9); /* Orange clair pour les succès */
-    margin-top: 10px;
-    font-size: 14px;
+/* Style des notifications système */
+.notification {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Notification d'erreur en rouge */
+.notification-error {
+    background-color: rgba(239, 68, 68, 0.2); /* Fond rouge semi-transparent */
+    border: 1px solid #ef4444; /* Bordure rouge */
+}
+
+/* Notification de succès en vert */
+.notification-success {
+    background-color: rgba(16, 185, 129, 0.2); /* Fond vert semi-transparent */
+    border: 1px solid #10b981; /* Bordure verte */
+}
+
+/* Conteneur d'icône avec fond semi-transparent pour notifications */
+.icon-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Fond blanc semi-transparent */
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
 }

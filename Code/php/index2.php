@@ -3,9 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require './PHPMailer/src/Exception.php';
-require './PHPMailer/src/PHPMailer.php';
-require './PHPMailer/src/SMTP.php';
+require '../PHPMailer/src/Exception.php';
+require '../PHPMailer/src/PHPMailer.php';
+require '../PHPMailer/src/SMTP.php';
 
 header('Content-Type: text/html; charset=utf-8');
 
@@ -16,12 +16,12 @@ function envoi_mail($from_name, $from_email, $service, $phone, $subject, $messag
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'alloprocm@gmail.com';
-    $mail->Password = 'yafyeasgvfisffqn';
+    $mail->Username = 'adam2005bouali@gmail.com';
+    $mail->Password = 'xvjadahpndumslhn';
     $mail->Port = 465;
 
     $mail->setFrom($from_email, $from_name);
-    $mail->addAddress('alloprocm@gmail.com', 'Adam Bouali');
+    $mail->addAddress('adam2005bouali@gmail.com', 'Adam Bouali');
 
     $mail->isHTML(true);
     $mail->Subject = $subject;
@@ -115,7 +115,7 @@ if (isset($_POST['name'], $_POST['email'], $_POST['service'], $_POST['phone'], $
             <div class='modal-content'>
                 <h2>Message Envoyé !</h2>
                 <p>Votre message a été envoyé avec succès. Nous vous recontacterons dans les plus brefs délais.</p>
-                <button onclick='window.location.href=\"../PHP/index2.html\"'>Retour à l'accueil</button>
+                <button onclick='window.location.href=\"../php/offline/index.html\"'>Retour à l'accueil</button>
             </div>
         </div>";
         exit;
